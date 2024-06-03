@@ -97,4 +97,4 @@ insert into narudzbe (korisnik, adresa, datum, ukupna_cijena) values
 
 
 insert into stavke (narudzba, jelovnik, kolicina) values
-(1,3,5),(2,4,)
+(1,3,5),(2,4,3),(3,6,1),(4,1,1),(4,2,1),(4,15,1);
