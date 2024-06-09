@@ -9,7 +9,7 @@
 
 Console.WriteLine("Hello, World!");
 
-Console.Write(7);
+Console.WriteLine(7);
 
 Console.WriteLine(true);
 
