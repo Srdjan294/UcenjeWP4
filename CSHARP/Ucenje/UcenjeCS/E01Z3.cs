@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UcenjeCS
 {
-    internal class E01Z2
+    internal class E01Z3
     {
         public static void Izvedi()
         {
