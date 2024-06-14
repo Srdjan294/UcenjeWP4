@@ -11,19 +11,19 @@ namespace UcenjeCS
         public static void Izvedi()
         {
             // zadatak
-            // Korisnik će unijeti dvoznamenkasti broj
-            // ispisuje se prva znamenka
-            // 56 => 5
-            // 11 => 1
+            // Za uneseni cijeli broj ispisati True ako je parni ili False ako je neparni
+
+
+            Console.WriteLine("Unesi cijeli broj: ");
 
             int a;
-            Console.WriteLine("Unesi dvoznamenkasti broj");
+
             a = int.Parse(Console.ReadLine());
 
-            int b = a / 10;
+            bool jeParni = a % 2 == 0 ? true : false;
 
-            Console.WriteLine(b);
-
+            Console.WriteLine(jeParni);
+            
 
 
         }
