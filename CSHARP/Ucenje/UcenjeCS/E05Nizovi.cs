@@ -27,8 +27,9 @@ namespace UcenjeCS
 
             // skraćena sintaksa definiranja niza skupa s zadanim vrijednostima
 
-            int[] niz = {2,3,4,5,6,7,7,6,5,6,5,3,5,5};
+            int[] niz = {2,8,4,5,6,7,7,6,5,6,5,3,5,5};
 
+            // ispiši broj 8
             Console.WriteLine(niz[1]);
 
             string[] gradovi = { "Osijek", "DonjiMiholjac","Valpovo"};

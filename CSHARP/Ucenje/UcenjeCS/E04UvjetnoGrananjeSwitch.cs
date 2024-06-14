@@ -16,7 +16,7 @@ namespace UcenjeCS
             int i = 0;
 
 
-            switch (i)
+            switch (i)  // radi s int, string i char tipovima podataka
             {
                 case 0:
                     Console.WriteLine("DOBAR");
@@ -27,7 +27,7 @@ namespace UcenjeCS
                 case 2:
                     Console.WriteLine("ZAO");
                     break;
-                default:
+                default:  // to je else u if-u
                     Console.WriteLine("Nije definirano");
                     break;
             }

@@ -14,27 +14,34 @@ namespace UcenjeCS
             // tekstualnu ocjenu
 
             int x = 0;
-            Console.WriteLine("Unesite ocjenu: ");
+            Console.WriteLine("Unesite ocjenu brojčano: ");
 
             x = int.Parse(Console.ReadLine());
 
             switch (x)
             {
-                case 1: Console.WriteLine("nedovoljan");
-                        break;
-
-                    case 2: Console.WriteLine("dovoljan");
-                        break;
-
-                    case 3: Console.WriteLine("dobar");
-                    break;
-                    case 4: Console.WriteLine("vrlo dobar");
+                case 1:
+                    Console.WriteLine("nedovoljan");
                     break;
 
-                    case 5: Console.WriteLine("odličan");
+                case 2:
+                    Console.WriteLine("dovoljan");
                     break;
 
-                    default: Console.WriteLine("nije definirano");
+                case 3:
+                    Console.WriteLine("dobar");
+                    break;
+
+                case 4:
+                    Console.WriteLine("vrlo dobar");
+                    break;
+
+                case 5:
+                    Console.WriteLine("odličan");
+                    break;
+
+                default:
+                    Console.WriteLine("nije definirano");
                     break;
             }
         }

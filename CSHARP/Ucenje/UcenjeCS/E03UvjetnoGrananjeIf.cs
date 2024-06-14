@@ -35,13 +35,74 @@ namespace UcenjeCS
             // uobičajena sintaksa što se tiče uvjeta 
             // ako ne postoje {} if se odnosi samo na 1. sljedeću liniju
             if (i > 2)
-            {
+            
                 Console.WriteLine("3. Ušao u if bez vitičastih zagrada");
                 Console.WriteLine("4. ovo se izvodi bez obzira na gornji if");
+
+
+            var j = 2;
+            
+            // dodatni operatori su & (and), &&, | (or), || (AltGr + W), ! (not)
+            
+            if(i < 2 && j == 2)
+            {
+                Console.WriteLine("5. logičko & (and)");
             }
 
 
+            // & provjerava oba uvjeta bez obzira što možda prvi bude false
+            // && ukoliko prvi uvjet bude false drugi se ne provjerava
 
+            if(j == 2 || i < 2)
+            {
+                Console.WriteLine("6. logičko or |");
+            }
+
+            // | provjerava oba uvjeta bez obzira što prvi bude true
+            // || Ukoliko prvi uvjet bude true drugi se ne provjerava
+
+            if(i != 5)
+            {
+                Console.WriteLine("7. i nema vrijednost 5");
+            }
+
+            var ocjena = 4;
+            
+            if(ocjena == 1)
+            {
+                Console.WriteLine("8. nedovoljan");
+            }else if(ocjena == 2){
+                
+                Console.WriteLine("9. dovoljan");
+            }
+            // da ne pišem sve 
+            else
+            {
+                Console.WriteLine("10. ocjena nije dobra");
+            }
+
+            // inline if
+
+            if(ocjena == 4)
+            {
+                Console.WriteLine("11. vrlo dobar si ");
+            }else 
+            {
+                Console.WriteLine("12. OK si");
+            }
+
+            // ova linija je ekvivalent gornjem if else
+            Console.WriteLine(ocjena == 4 ? "11. Vrlo dobar si" : "12. OK si");
+
+            
+            // if se može gnijezditi
+            if(i > 0)
+            {
+                if(ocjena == 4) 
+                {
+                    Console.WriteLine("12. Gnježđenje se može zapravo zamijeniti s &&");
+                }
+            }
 
         }
        
