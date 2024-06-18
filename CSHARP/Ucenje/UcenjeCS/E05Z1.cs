@@ -18,6 +18,8 @@ namespace UcenjeCS
             niz[2] = 7;
 
             int[] krace = { 7, 7, 7 };
+
+           
         }
     }
 }
