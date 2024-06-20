@@ -1,7 +1,13 @@
 ﻿
 using UcenjeCS;
 
-E06ForPetlja.Izvedi();
+E10Z2.Izvedi();
+
+//E10Z1.Izvedi();
+
+//E07Z1.Izvedi();
+
+//E06ForPetlja.Izvedi();
 
 //E05Z3.Izvedi();
 
