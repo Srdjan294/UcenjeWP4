@@ -34,7 +34,7 @@ namespace UcenjeCS
 
             for(int i = 0; i < ub; i++)
             {
-                Console.WriteLine("Unesi {0}, broj: ", i+1);
+                Console.Write("Unesi {0}. broj: ", i+1);
                 brojevi[i] = int.Parse(Console.ReadLine());
 
             }

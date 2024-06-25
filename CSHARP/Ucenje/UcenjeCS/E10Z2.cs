@@ -13,6 +13,7 @@ namespace UcenjeCS
         {
             // Za unesenu riječ provjerite da li je palindrom?
             // Palindrom je riječ koja se jednako čita s obje strane
+            // anavolimilovana, 02022020, ananabraparbanana, evolove
 
             Console.WriteLine("Unesi riječ: ");
             string rijec = Console.ReadLine();
@@ -27,7 +28,9 @@ namespace UcenjeCS
                         palindrom = false;
                         break;
                     }
+
                 }
+                Console.WriteLine("Riječ {0} {1} palindrom", rijec, palindrom ? "JE" : "NIJE");
             }
 
         }
