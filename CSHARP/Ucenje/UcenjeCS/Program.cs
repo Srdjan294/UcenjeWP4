@@ -1,7 +1,11 @@
 ﻿
 using UcenjeCS;
 
-E11Metode.Izvedi();
+E12Rekurzija.Izvedi();
+
+//E11Z1.Izvedi();
+
+//E11Metode.Izvedi();
 
 //CiklicnaMatrica.Izvedi();
 

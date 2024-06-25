@@ -38,6 +38,20 @@ namespace UcenjeCS
 
 
 
+            // ispiši sve brojeve od dva unesena broja
+
+            int odBroja = Pomocno.UcitajCijeliBroj("Unesi od broja");
+            int doBroja = Pomocno.UcitajCijeliBroj("Unesi do broja");
+
+            for(int i = odBroja; i < doBroja; i++)
+
+                if (primBroj(i))
+                {
+                    Console.WriteLine(i);
+                }
+
+
+
         }
 
         // Tip 1. Metoda ne prima parametre i ne vraća vrijednost
@@ -106,7 +120,23 @@ namespace UcenjeCS
 
 
             return suma;
-            //throw new NotImplementedException;
+            //throw new NotImplementedException(); može i ovako
+        }
+
+
+        // primjer metode s više return izraza
+
+        static bool primBroj(int broj)
+        {
+            for(int i = 2; i < broj; i++)
+            {
+                if(broj % i == 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }
