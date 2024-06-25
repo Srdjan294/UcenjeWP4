@@ -1,7 +1,9 @@
 ﻿
 using UcenjeCS;
 
-CiklicnaMatrica.Izvedi();
+E11Metode.Izvedi();
+
+//CiklicnaMatrica.Izvedi();
 
 //E10Z2.Izvedi();
 
