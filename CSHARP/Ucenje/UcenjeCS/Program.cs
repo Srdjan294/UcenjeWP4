@@ -1,9 +1,13 @@
 ﻿
 using UcenjeCS;
-
 using UcenjeCS.E13KlasaObjekt;
 
-UcenjeCS.E13KlasaObjekt.Program.Izvedi();
+
+new UcenjeCS.E15RadSStringovima.Program();
+
+//new UcenjeCS.E14Nasljedivanje.Program();
+
+//UcenjeCS.E13KlasaObjekt.Program.Izvedi();
 
 //E12Rekurzija.Izvedi();
 
