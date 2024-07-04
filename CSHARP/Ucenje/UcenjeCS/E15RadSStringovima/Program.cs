@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,7 +63,10 @@ namespace UcenjeCS.E15RadSStringovima
 
             Console.WriteLine(s.Replace('a','b'));
 
+            Console.WriteLine(s.Replace("a","b",true,CultureInfo.CurrentCulture));
 
+
+            
         }
     }
 }
