@@ -2,7 +2,9 @@
 using UcenjeCS;
 using UcenjeCS.E13KlasaObjekt;
 
-new UcenjeCS.E17Subota.Program();
+new UcenjeCS.E17Subota.Raspored();
+
+//new UcenjeCS.E17Subota.Program();
 
 //new UcenjeCS.E16GenericiLambdaEkstenzije.Program();
 
