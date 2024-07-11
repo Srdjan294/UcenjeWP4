@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UcenjeCS.E18KonzolnaAplikacija.Model
+﻿namespace UcenjeCS.E18KonzolnaAplikacija.Model
 {
-    internal class Smjer: Entitet
+    internal class Smjer:Entitet
     {
+
         public string? Naziv { get; set; }
         public int? Trajanje { get; set; }
         public float? Cijena { get; set; }
@@ -16,7 +11,9 @@ namespace UcenjeCS.E18KonzolnaAplikacija.Model
 
         public override string ToString()
         {
-            return "Sifra = " + Sifra + ", Naziv = " + Naziv + ", Trajanje = " + Trajanje + ", Cijena = " + Cijena + ", IzvodiSeOd = " + IzvodiSeOd + ", Verificiran = " + Verificiran; 
+            return "Sifra=" + Sifra + " ,Naziv=" + Naziv + ", Trajanje=" + Trajanje + ", Cijena=" + Cijena +
+                ", IzvodiSeOd=" + IzvodiSeOd + ", Verificiran=" + Verificiran; 
         }
+
     }
 }
