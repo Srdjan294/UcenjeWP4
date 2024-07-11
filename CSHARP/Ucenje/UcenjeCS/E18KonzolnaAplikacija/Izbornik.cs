@@ -9,7 +9,7 @@ namespace UcenjeCS.E18KonzolnaAplikacija
     internal class Izbornik
     {
 
-        public ObradaSmjer ObradaSmjer { get; set; } = new ObradaSmjer();  // da ne mora raditi konstancu u konstruktoru
+        public ObradaSmjer ObradaSmjer { get; set; } = new ObradaSmjer();  // da ne mora raditi instancu u konstruktoru
 
         public Izbornik() 
         {

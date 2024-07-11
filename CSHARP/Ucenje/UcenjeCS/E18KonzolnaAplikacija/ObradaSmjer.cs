@@ -51,17 +51,19 @@ namespace UcenjeCS.E18KonzolnaAplikacija
         private void PrikaziSmjerove()
         {
             Console.WriteLine("*****************************");
-            Console.WriteLine("Unesite tražene podatke o smjeru");
+            Console.WriteLine("Smjerovi u aplikaciji");
             Console.WriteLine("*****************************");
             foreach (var s in Smjerovi)
             {
-                Console.WriteLine(s.Naziv);  // prepisati metodu toString
+                Console.WriteLine(s);  // prepisati metodu toString
             }
             Console.WriteLine("*********************************");
         }
 
         private void UnosNovogSmjera()
         {
+            Console.WriteLine("*******************************");
+            Console.WriteLine("Unesite tražene podatke o smjeru");
 
             Smjerovi.Add(new()
             {
@@ -69,7 +71,7 @@ namespace UcenjeCS.E18KonzolnaAplikacija
                 Naziv = Pomocno.UcitajString("Unesi naziv smjera", 50, true),
                 Trajanje = Pomocno.UcitajRasponBroja("Unesi trajanje smjera", 1, 500),
                 Cijena = Pomocno.UcitajDecimalniBroj("Unesi cijenu smjera", 0, 10000),
-                IzvodiSeOd = Pomocno.UcitajDatum("Unesi datum od kada se izvodi smjer", true)
+                IzvodiSeOd = Pomocno.UcitajDatum("Unesi datum od kada se izvodi smjer", true),
                 Verificiran = Pomocno.UcitajBool("Da li je smjer verificiran (DA/NE)","da")
             });
         }

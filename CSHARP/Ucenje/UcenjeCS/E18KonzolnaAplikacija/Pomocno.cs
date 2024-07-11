@@ -23,15 +23,14 @@ namespace UcenjeCS.E18KonzolnaAplikacija
             {
                 try
                 {
-                    Console.WriteLine("Format unosa je yyyy-mm-dd, za današnji datum {0}",
+                    Console.WriteLine("Format unosa je yyyy-MM-dd, za današnji datum {0}",
                         DateTime.Now.ToString("yyyy-MM-dd"));
-                    Console.WriteLine(poruka);
-                    d = DateTime.Parse(Console.ReadLine());
                     if (kontrolaPrijeDanasnjegDatuma)
                     {
-                        Console.WriteLine("Uneseni datum ne smije biti prije ");
+                        Console.WriteLine("Uneseni datum ne smije biti prije današnjeg datuma ");
                     }
-                    Console.WriteLine();
+                    Console.Write(poruka + ": ");
+                    d = DateTime.Parse(Console.ReadLine());
                     if (kontrolaPrijeDanasnjegDatuma && d < DateTime.Now)
                     {
                         throw new Exception();
@@ -62,8 +61,8 @@ namespace UcenjeCS.E18KonzolnaAplikacija
                 }
                 catch
                 {
-                    Console.WriteLine("Decimalni broj mora biti u rasponu ");
-                }
+                    Console.WriteLine("Decimalni broj mora biti u rasponu {0} i {1}", min, max);
+                }           
             }
         }
 
@@ -75,7 +74,7 @@ namespace UcenjeCS.E18KonzolnaAplikacija
             {
                 try
                 {
-                    Console.WriteLine(poruka + ": ");
+                    Console.Write(poruka + ": ");
                     b = int.Parse(Console.ReadLine());
                     if(b < min || b > max)
                     {
@@ -88,10 +87,6 @@ namespace UcenjeCS.E18KonzolnaAplikacija
                     Console.WriteLine("Unos nije dobar, unos mora biti u rasponu {0} - {1}", min, max);
                 }
             }
-
-
-
-            return 0;
         }
 
         internal static string UcitajString(string poruka, int max, bool obavezno)
@@ -99,9 +94,9 @@ namespace UcenjeCS.E18KonzolnaAplikacija
             string s;
             while(true)
             {
-                Console.WriteLine(poruka);
+                Console.Write(poruka + ": ");
                 s = Console.ReadLine().Trim();
-                if((obavezno)s.Length == 0 || s.Length > max)
+                if((obavezno && s.Length == 0) || s.Length > max)
                 {
                     Console.WriteLine("Unos obavezan, maksimalno dozvoljeno {0} znakova", max);
                     continue;
