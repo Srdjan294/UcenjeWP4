@@ -9,7 +9,7 @@
 
         public int CompareTo(Polaznik? other)
         {
-            return Prezime.CompareTo(other)
+            return Prezime.CompareTo(other.Prezime);
         }
     }
 }

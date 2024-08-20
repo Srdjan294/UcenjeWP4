@@ -7,7 +7,6 @@ namespace UcenjeCS.E18KonzolnaAplikacija
     {
 
         public List<Polaznik>  Polaznici { get; set; }
-        
 
         public ObradaPolaznik() 
         { 
@@ -16,12 +15,11 @@ namespace UcenjeCS.E18KonzolnaAplikacija
             {
                 UcitajTestnePodatke();
             }
-
         }
 
         private void UcitajTestnePodatke()
         {
-            for(int i = 0;i < 10; i++)
+            for(int i = 0; i < 10; i++)
             {
                 Polaznici.Add(new()
                 {
@@ -55,7 +53,7 @@ namespace UcenjeCS.E18KonzolnaAplikacija
                     PrikaziIzbornik();
                     break;
                 case 3:
-                    PromjeniPodatkePolaznika();
+                    PromjeniPodatakPolaznika();
                     PrikaziIzbornik();
                     break;
                 case 4:
@@ -72,19 +70,24 @@ namespace UcenjeCS.E18KonzolnaAplikacija
         {
             PrikaziPolaznike();
             var odabrani = Polaznici[
-                Pomocno.UcitajRasponBroja("Odaberi redni broj polaznika za promjenu", 1, Polaznici.Count) - 1
+                Pomocno.UcitajRasponBroja("Odaberi redni broj polaznika za brisanje",
+                1, Polaznici.Count) - 1
                 ];
-            if(Pomocno.UcitajBool(""))
+            if (Pomocno.UcitajBool("Sigurno obrisati " + odabrani.Ime + " " + odabrani.Prezime + "? (DA/NE)", "da"))
+            {
+                Polaznici.Remove(odabrani);
+            }
         }
 
-        private void PromjeniPodatkePolaznika()
+        private void PromjeniPodatakPolaznika()
         {
             PrikaziPolaznike();
             var odabrani = Polaznici[
-                Pomocno.UcitajRasponBroja("Odaberi redni broj polaznika za promjenu", 1, Polaznici.Count) - 1
+                Pomocno.UcitajRasponBroja("Odaberi redni broj polaznika za promjenu",
+                1,Polaznici.Count)-1
                 ];
-            odabrani.Sifra = Pomocno.UcitajRasponBroja("Unesi šifru smjera", 1, int.MaxValue);
-            odabrani.Ime = Pomocno.UcitajString("Unesi ime polaznika", 50, true);
+            odabrani.Sifra = Pomocno.UcitajRasponBroja("Unesi šifru polaznika", 1, int.MaxValue);
+            odabrani.Ime = Pomocno.UcitajString(odabrani.Ime,"Unesi ime polaznika", 50, true);
             odabrani.Prezime = Pomocno.UcitajString("Unesi prezime polaznika", 50, true);
             odabrani.Email = Pomocno.UcitajString("Unesi email polaznika", 50, true);
             odabrani.OIB = Pomocno.UcitajString("Unesi OIB polaznika", 50, true);
@@ -108,7 +111,7 @@ namespace UcenjeCS.E18KonzolnaAplikacija
             Console.WriteLine("Unesite tražene podatke o polazniku");
             Polaznici.Add(new()
             {
-                Sifra = Pomocno.UcitajRasponBroja("Unesi šifru smjera", 1, int.MaxValue),
+                Sifra = Pomocno.UcitajRasponBroja("Unesi šifru polaznika", 1, int.MaxValue),
                 Ime = Pomocno.UcitajString("Unesi ime polaznika", 50, true),
                 Prezime = Pomocno.UcitajString("Unesi prezime polaznika", 50, true),
                 Email = Pomocno.UcitajString("Unesi email polaznika", 50, true),
